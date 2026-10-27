@@ -1,0 +1,55 @@
+{
+  "name": "classevivapi.js",
+  "version": "1.0.1",
+  "description": "Comprehensive, production-ready Node.js & TypeScript wrapper for the ClasseViva (Gruppo Spaggiari) Web REST API.",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/*.test.js",
+    "prepublishOnly": "npm run typecheck && npm run build && npm test"
+  },
+  "keywords": [
+    "classeviva",
+    "spaggiari",
+    "registro-elettronico",
+    "classeviva-api",
+    "school",
+    "education",
+    "api-wrapper",
+    "typescript"
+  ],
+  "author": "Just1diaxx",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Just1diaxx/classeviva.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Just1diaxx/classeviva.js/issues"
+  },
+  "homepage": "https://github.com/Just1diaxx/classeviva.js#readme",
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
+  }
+}
